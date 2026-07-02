@@ -41,7 +41,7 @@
 
   /* ---------- GENTLE PARALLAX ON PHOTOS ---------- */
   var paraEls = Array.prototype.slice.call(document.querySelectorAll("[data-parallax]"));
-  if (!reduce && paraEls.length) {
+  if (!reduce && paraEls.length && window.innerWidth > 760) {
     var ticking = false;
     var vh = window.innerHeight || 800;
 
@@ -114,11 +114,34 @@
         return;
       }
 
-      // Live MailerLite endpoint present.
-      // If a same-tab redirect is desired and the form opens in a new tab,
-      // honor data-redirect after letting the post fire.
-      if (redirect && form.getAttribute("target") === "_blank") {
-        setTimeout(function () { window.location.href = redirect; }, 400);
+      // Live MailerLite endpoint present. The post fires into the hidden
+      // iframe (target="ml_iframe"); once it's away, honor data-redirect in
+      // this tab so the visitor lands on the thank-you page. Double opt-in is
+      // on, so thank-you.html tells them to confirm via email.
+      var target = form.getAttribute("target");
+      if (redirect && target && target !== "_self") {
+        try {
+          if (emailField && emailField.value) {
+            localStorage.setItem("exhale_email", emailField.value);
+          }
+        } catch (e) {}
+
+        // Instant inline reassurance while the thank-you page loads.
+        var note = form.nextElementSibling;
+        if (!note || note.className.indexOf("signup-confirm") === -1) {
+          note = document.createElement("p");
+          note.className = "signup-confirm";
+          note.setAttribute("role", "status");
+          note.textContent = "\u2713 Almost there \u2014 check your email to confirm.";
+          form.insertAdjacentElement("afterend", note);
+        }
+        // trigger the fade-in on the next frame
+        requestAnimationFrame(function () { note.classList.add("show"); });
+
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) { btn.disabled = true; btn.style.opacity = "0.65"; btn.style.cursor = "default"; }
+
+        setTimeout(function () { window.location.href = redirect; }, 1400);
       }
     });
   });

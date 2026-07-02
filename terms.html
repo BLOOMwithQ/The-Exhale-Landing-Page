@@ -2,63 +2,98 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Terms &amp; Conditions · BLOOM with Quadia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Terms & Conditions | BLOOM with Quadia</title>
+<meta name="robots" content="noindex" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600&family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=4" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Hanken+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
-  .legal { background: var(--paper); min-height: 100vh; padding: clamp(3.5rem, 8vh, 6rem) 0 5rem; }
-  .legal .lg-top { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.6px solid var(--ink); padding-bottom: 0.8rem; margin-bottom: clamp(2rem, 5vw, 3.4rem); }
-  .legal .lg-mark { font-family: "Bodoni Moda", serif; font-weight: 700; letter-spacing: 0.4em; color: var(--oxblood); }
-  .legal .lg-back { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); border-bottom: 1px solid var(--line); }
-  .legal h1 { font-family: "Bodoni Moda", serif; font-weight: 500; font-size: clamp(2.4rem, 6vw, 4rem); color: var(--ink); margin: 0 0 0.4rem; }
-  .legal .lg-meta { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 2.6rem; }
-  .legal h2 { font-family: "Bodoni Moda", serif; font-weight: 500; font-size: clamp(1.4rem, 2.6vw, 1.9rem); color: var(--ink); margin: 2.4rem 0 0.8rem; }
-  .legal p, .legal li { font-size: 1.05rem; line-height: 1.75; color: var(--ink-body); max-width: 70ch; }
-  .legal ul { padding-left: 1.2rem; }
-  .legal li { margin-bottom: 0.5rem; }
-  .legal .lg-note { margin-top: 3rem; padding: 1.2rem 1.4rem; border: 1px dashed var(--line); border-radius: 4px; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.04em; line-height: 1.6; color: var(--ink-mute); text-transform: none; }
+  :root{ --plum:#160718; --plum2:#2B0E24; --cream:#FFF8EF; --cream2:#FBF4EC; --rose:#C84F77; --softrose:#E37D9B; --ink:#2B0E24; --body:#3A2335; --mute:#5A4452; --line:rgba(43,14,36,0.14); }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{ margin:0; background:var(--cream); color:var(--body); font-family:"Hanken Grotesk",system-ui,sans-serif; font-weight:400; line-height:1.7; -webkit-font-smoothing:antialiased; }
+  a{ color:var(--rose); }
+  .strip{ background:var(--plum); color:rgba(255,248,239,0.9); text-align:center; font-family:ui-monospace,Menlo,monospace; font-size:0.62rem; letter-spacing:0.24em; text-transform:uppercase; padding:0.62rem 1rem; }
+  .strip .sep,.strip .brand{ color:var(--softrose); }
+  header.lede{ background:var(--plum2); color:var(--cream); padding:clamp(3rem,8vw,5rem) 1.5rem clamp(2.4rem,6vw,3.4rem); text-align:center; }
+  .lock{ font-family:"Cormorant Garamond",serif; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; font-size:1.4rem; color:var(--cream); display:inline-flex; gap:0.2em; align-items:baseline; }
+  .lock .scr{ font-family:"Great Vibes",cursive; letter-spacing:0; text-transform:none; font-size:1.7rem; color:var(--softrose); }
+  header.lede h1{ font-family:"Hanken Grotesk",sans-serif; font-weight:800; letter-spacing:-0.02em; font-size:clamp(2.2rem,6vw,3.4rem); margin:1.4rem 0 0.6rem; line-height:1.05; }
+  header.lede .upd{ font-family:ui-monospace,Menlo,monospace; font-size:0.66rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--softrose); }
+  main{ width:min(760px,calc(100% - 3rem)); margin:0 auto; padding:clamp(2.6rem,7vw,4.5rem) 0 2rem; }
+  .note{ background:var(--cream2); border:1px solid var(--line); border-left:3px solid var(--rose); border-radius:4px; padding:1.2rem 1.4rem; font-size:0.95rem; color:var(--mute); margin-bottom:2.6rem; }
+  h2{ font-family:"Hanken Grotesk",sans-serif; font-weight:800; letter-spacing:-0.01em; font-size:clamp(1.4rem,3.4vw,1.85rem); color:var(--ink); margin:2.6rem 0 0.4rem; line-height:1.15; }
+  .ey{ font-family:ui-monospace,Menlo,monospace; font-size:0.64rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--rose); font-weight:700; }
+  p{ margin:0.7rem 0; font-size:1.04rem; }
+  ul{ margin:0.7rem 0 0.7rem 1.1rem; padding:0; }
+  li{ margin:0.4rem 0; }
+  .ph{ background:rgba(200,79,119,0.08); border-radius:3px; padding:0 0.25em; color:var(--mute); font-style:italic; }
+  footer{ background:var(--plum); color:rgba(255,248,239,0.82); text-align:center; padding:clamp(2.4rem,6vw,3.4rem) 1.5rem; }
+  footer .lock{ font-size:1.3rem; }
+  footer .tag{ font-family:"Cormorant Garamond",serif; font-style:italic; font-size:1rem; color:rgba(255,248,239,0.7); margin-top:0.7rem; }
+  footer .tag b{ color:var(--softrose); font-style:normal; font-weight:600; }
+  footer .lnk{ margin-top:1.4rem; font-family:ui-monospace,Menlo,monospace; font-size:0.66rem; letter-spacing:0.14em; text-transform:uppercase; }
+  footer a{ color:var(--cream); }
 </style>
 </head>
 <body>
-  <section class="legal">
-    <div class="wrap-tight">
-      <div class="lg-top">
-        <a href="index.html" class="lg-mark">BLOOM</a>
-        <a href="index.html" class="lg-back">&larr; Back to The Exhale</a>
-      </div>
+  <div class="strip">Exhaustion is not excellence <span class="sep">·</span> <span class="brand">BLOOM with Quadia</span></div>
 
-      <h1>Terms &amp; Conditions</h1>
-      <div class="lg-meta">BLOOM with Quadia · Last updated 2026</div>
+  <header class="lede">
+    <div class="lock">BLOOM <span class="scr">with</span> QUADIA</div>
+    <h1>Terms &amp; Conditions</h1>
+    <div class="upd">Last updated: <span class="ph">[date]</span></div>
+  </header>
 
-      <p>By joining The Exhale and using this site, you agree to these terms. They are written plainly, in the same spirit as everything else here.</p>
+  <main>
+    <div class="note"><strong>Scaffolding.</strong> This is a structured starting point, not legal advice. Replace every <span class="ph">[bracketed]</span> note with your real details and have it reviewed before publishing.</div>
 
-      <h2>What you receive</h2>
-      <p>The Exhale is a free seven-day reset delivered by email, along with The EXHALE Declaration at the end. It is offered for your personal reflection and is not medical, psychological, or financial advice.</p>
+    <span class="ey">Section 01</span>
+    <h2>Agreement to these terms</h2>
+    <p>These Terms &amp; Conditions govern your use of <span class="ph">[bloomwithquadia.com]</span> and your participation in The EXHALE and other offerings from <strong>BLOOM with Quadia</strong> (<span class="ph">[legal entity name]</span>). By joining or using them, you agree to these terms. If you do not agree, please do not use them.</p>
 
-      <h2>Your responsibilities</h2>
-      <ul>
-        <li>Provide a valid email address that belongs to you.</li>
-        <li>Use the content for your own personal, non-commercial reflection.</li>
-        <li>Reach out if anything does not arrive, so we can make it right.</li>
-      </ul>
+    <span class="ey">Section 02</span>
+    <h2>What The EXHALE is</h2>
+    <p>The EXHALE is a free reflective wellness experience delivered by email and a private web page. It offers education and reflection only. <strong>It is not medical care, therapy, diagnosis, or treatment</strong>, and it is not a substitute for professional advice. If you are in crisis or need care, please contact a qualified professional.</p>
 
-      <h2>Intellectual property</h2>
-      <p>All letters, writing, artwork, and materials within The Exhale and BLOOM with Quadia are owned by Quadia. You are welcome to enjoy and reflect on them, but please do not copy, resell, or redistribute them without written permission.</p>
+    <span class="ey">Section 03</span>
+    <h2>Eligibility</h2>
+    <p>You must be at least <span class="ph">[16 / 18]</span> years old to join. By signing up, you confirm the email address you provide is yours and that the information you give is accurate.</p>
 
-      <h2>No guarantees</h2>
-      <p>The Exhale is shared with care, but everyone's life is different. We make no promises about specific outcomes. What you take from it is yours to shape.</p>
+    <span class="ey">Section 04</span>
+    <h2>Paid offerings</h2>
+    <p>Some BLOOM with Quadia offerings (for example, <span class="ph">[BLOOM @ Night, the Rose Starter Bundle, coaching]</span>) are paid. Prices, inclusions, and any refund terms are described at the point of purchase. <span class="ph">[State your refund / cancellation policy here.]</span></p>
 
-      <h2>Changes</h2>
-      <p>We may update these terms from time to time. The current version will always live on this page.</p>
+    <span class="ey">Section 05</span>
+    <h2>Intellectual property</h2>
+    <p>All content in The EXHALE and across BLOOM with Quadia, including text, design, artwork, and the BLOOM name and marks, is owned by us or our licensors and is provided for your personal, non-commercial use. Please do not copy, resell, or redistribute it without written permission.</p>
 
-      <h2>Contact</h2>
-      <p>Questions are answered gently. Reach us at <a href="mailto:quadia@bloomwithquadia.com" style="color:var(--oxblood);border-bottom:1px solid var(--line)">quadia@bloomwithquadia.com</a>.</p>
+    <span class="ey">Section 06</span>
+    <h2>Acceptable use</h2>
+    <p>You agree not to misuse the materials, attempt to disrupt the service, or use it in any unlawful way.</p>
 
-      <div class="lg-note">Placeholder terms for layout. Have a qualified professional review and finalize this language for your jurisdiction before publishing.</div>
-    </div>
-  </section>
+    <span class="ey">Section 07</span>
+    <h2>Disclaimers and limitation of liability</h2>
+    <p>The materials are provided "as is," without warranties of any kind. To the fullest extent permitted by law, BLOOM with Quadia is not liable for any indirect or consequential loss arising from your use of, or reliance on, the materials. Nothing in these terms limits liability that cannot be limited by law.</p>
+
+    <span class="ey">Section 08</span>
+    <h2>Changes</h2>
+    <p>We may update these terms or our offerings from time to time. The "last updated" date above reflects the most recent version. Continued use after a change means you accept the updated terms.</p>
+
+    <span class="ey">Section 09</span>
+    <h2>Governing law</h2>
+    <p>These terms are governed by the laws of <span class="ph">[your state / country]</span>, without regard to conflict-of-law rules.</p>
+
+    <span class="ey">Section 10</span>
+    <h2>Contact</h2>
+    <p>BLOOM with Quadia<br /><span class="ph">[Mailing address]</span><br /><a href="mailto:quadia@bloomwithquadia.com">quadia@bloomwithquadia.com</a></p>
+  </main>
+
+  <footer>
+    <div class="lock">BLOOM <span class="scr">with</span> QUADIA</div>
+    <div class="tag">✦ breathe. rest. trust. <b>BLOOM.</b></div>
+    <div class="lnk"><a href="index.html">← Return to The EXHALE</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></div>
+  </footer>
 </body>
 </html>
