@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>This page took a quiet moment | The EXHALE — BLOOM with Quadia</title>
+<meta name="description" content="The page you are looking for has stepped away. Return to The EXHALE." />
+<meta name="robots" content="noindex" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ivory:#F8EFE7; --paper:#F8EFE7;
+    --oxblood:#A62A5E; --oxblood-2:#7E1F48;
+    --noir-2:#160718;
+    --rose:#C84F77; --rose-2:#E37D9B; --blush:#ECB3C8;
+    --ink:#2B0E24; --ink-body:#3A2335; --ink-mute:#5A4452;
+    --line:rgba(43,14,36,0.2);
+    --serif:"Playfair Display", Georgia, serif;
+    --quote:"Cormorant Garamond", Georgia, serif;
+    --sans:"Hanken Grotesk", system-ui, sans-serif;
+    --mono:ui-monospace, "SFMono-Regular", Menlo, monospace;
+    --ease:cubic-bezier(0.22,0.61,0.27,1);
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{ margin:0; min-height:100vh; display:flex; flex-direction:column; font-family:var(--sans); font-size:1.14rem;
+    line-height:1.75; color:var(--ink-body); background:var(--ivory); -webkit-font-smoothing:antialiased; }
+  a{ color:var(--oxblood); text-decoration:none; }
+  a:hover{ color:var(--oxblood-2); }
+
+  .mh{ background:var(--noir-2); color:rgba(255,248,239,.9); text-align:center; font-family:var(--mono);
+    font-size:.6rem; letter-spacing:.24em; text-transform:uppercase; padding:.6rem 1rem; }
+  .mh b{ color:var(--blush); font-weight:400; }
+
+  .nf{ flex:1; display:grid; place-items:center; text-align:center; padding:clamp(4rem,10vh,6rem) 0; }
+  .nf-in{ width:min(640px, calc(100% - 2.8rem)); margin-inline:auto; }
+  .nf-from{ font-family:var(--quote); font-style:italic; font-size:1.25rem; color:var(--ink-mute); }
+  .nf-num{ font-family:var(--serif); font-style:italic; font-size:clamp(5rem,16vw,9rem); line-height:.9;
+    color:var(--rose); margin:.4rem 0 .8rem; letter-spacing:-.02em; }
+  .nf h1{ font-family:var(--serif); font-weight:500; font-size:clamp(1.9rem,4.6vw,2.9rem); line-height:1.12;
+    color:var(--ink); margin:0 0 1.1rem; }
+  .nf p{ max-width:42ch; margin:0 auto 2.2rem; color:var(--ink-mute); font-size:1.05rem; line-height:1.65; }
+  .btn{ display:inline-flex; align-items:center; gap:.7rem; padding:1rem 2rem; border-radius:2px;
+    font-family:var(--sans); font-size:.76rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase;
+    background:var(--oxblood); color:var(--paper); transition:background .35s var(--ease), transform .35s var(--ease); }
+  .btn:hover{ background:var(--oxblood-2); color:var(--paper); transform:translateY(-2px); }
+  .nf-line{ font-family:var(--quote); font-style:italic; font-size:clamp(1.3rem,2.6vw,1.6rem); color:var(--rose);
+    margin:2.6rem auto 0; }
+
+  footer{ background:#190A1D; text-align:center; padding:1.8rem 1.4rem; }
+  footer .fcreed{ font-family:var(--quote); font-style:italic; font-size:1.02rem; color:rgba(255,248,239,.78); }
+  footer .fcreed b{ font-style:normal; font-family:var(--serif); font-weight:600; color:var(--paper); letter-spacing:.02em; }
+  footer .fcopy{ font-size:.78rem; color:rgba(255,248,239,.5); margin:.5rem 0 0; }
+</style>
+</head>
+<body>
+
+  <div class="mh">A letter, before anything else <b>· BLOOM with Quadia</b></div>
+
+  <main class="nf">
+    <div class="nf-in">
+      <div class="nf-from">The EXHALE · Issue No. 001</div>
+      <div class="nf-num" aria-hidden="true">404</div>
+      <h1>This page took a quiet moment for itself.</h1>
+      <p>The thing you were looking for is not here, which feels, honestly, a little on brand. Let us bring you back to where the breath begins.</p>
+      <a href="index.html" class="btn">Return to the letter <span aria-hidden="true">&rarr;</span></a>
+      <p class="nf-line">Exhaustion is not excellence.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="fcreed">breathe. rest. trust. <b>BLOOM.</b></div>
+    <p class="fcopy">&copy; 2026 BLOOM with Quadia. All rights reserved.</p>
+  </footer>
+</body>
+</html>

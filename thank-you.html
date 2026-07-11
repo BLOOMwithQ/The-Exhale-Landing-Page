@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Your welcome email is on its way | The EXHALE — BLOOM with Quadia</title>
+<meta name="description" content="Welcome to The EXHALE, Issue 001. Your welcome email with your private link is on its way." />
+<meta name="robots" content="noindex" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="quadia-byline.png" fetchpriority="high" />
+
+<style>
+  :root{
+    --ivory:#F8EFE7; --paper:#F8EFE7;
+    --oxblood:#A62A5E; --oxblood-2:#7E1F48;
+    --noir:#2A1228; --noir-2:#160718;
+    --rose:#C84F77; --rose-2:#E37D9B; --blush:#ECB3C8;
+    --ink:#2B0E24; --ink-body:#3A2335; --ink-mute:#5A4452;
+    --line:rgba(43,14,36,0.2); --line-soft:rgba(43,14,36,0.1);
+    --serif:"Playfair Display", Georgia, serif;
+    --quote:"Cormorant Garamond", Georgia, serif;
+    --sans:"Hanken Grotesk", system-ui, sans-serif;
+    --mono:ui-monospace, "SFMono-Regular", Menlo, monospace;
+    --ease:cubic-bezier(0.22,0.61,0.27,1);
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{ margin:0; font-family:var(--sans); font-size:1.14rem; line-height:1.75; color:var(--ink-body);
+    background:var(--ivory); -webkit-font-smoothing:antialiased; }
+  img{ max-width:100%; display:block; }
+  a{ color:var(--oxblood); text-decoration:none; }
+  a:hover{ color:var(--oxblood-2); }
+  em{ font-style:italic; color:var(--rose); }
+  .wrap{ width:min(720px, calc(100% - 2.8rem)); margin-inline:auto; }
+
+  /* masthead */
+  .mh{ background:var(--noir-2); color:rgba(255,248,239,.9); text-align:center; font-family:var(--mono);
+    font-size:.6rem; letter-spacing:.24em; text-transform:uppercase; padding:.6rem 1rem; }
+  .mh b{ color:var(--blush); font-weight:400; }
+
+  /* byline hero, mirroring the letter */
+  .byline{ background:var(--ivory); padding:clamp(3rem,7vw,5.5rem) 0 0; text-align:center; }
+  .byline .portrait{ width:clamp(108px,16vw,140px); height:clamp(108px,16vw,140px); border-radius:50%;
+    object-fit:cover; object-position:50% 42%; margin:0 auto 1.4rem; border:3px solid var(--paper);
+    box-shadow:0 22px 44px -22px rgba(22,7,24,.5); }
+  .byline .from{ font-family:var(--quote); font-style:italic; font-size:1.25rem; color:var(--ink-mute); }
+  .byline h1{ font-family:var(--serif); font-weight:500; font-size:clamp(2.3rem,6.4vw,3.9rem);
+    line-height:1.1; letter-spacing:.005em; color:var(--ink); margin:.7rem 0 1rem; }
+  .byline h1 em{ font-style:italic; color:var(--rose); }
+  .byline .dek{ font-size:1.06rem; color:var(--ink-mute); max-width:46ch; margin:0 auto; }
+  .byline .dek strong{ color:var(--ink); font-weight:600; }
+  .byline-rule{ display:flex; align-items:center; gap:1rem; margin:clamp(2rem,4vw,2.8rem) auto 0; max-width:280px; }
+  .byline-rule::before,.byline-rule::after{ content:""; height:1px; background:var(--line); flex:1; }
+  .byline-rule span{ color:var(--rose); font-size:.8rem; }
+
+  /* next steps */
+  .next{ padding:clamp(2.4rem,5vw,3.6rem) 0 clamp(3.6rem,8vw,5.5rem); }
+  .next .wrap{ width:min(560px, calc(100% - 2.8rem)); }
+  .ty-steps{ list-style:none; padding:0; margin:0; text-align:left; }
+  .ty-steps li{ position:relative; padding:1.15rem 0 1.15rem 3.2rem; border-bottom:1px solid var(--line-soft);
+    font-size:1.05rem; line-height:1.65; color:var(--ink-body); }
+  .ty-steps li:last-child{ border-bottom:none; }
+  .ty-steps li .n{ position:absolute; left:0; top:1rem; width:2.1rem; height:2.1rem; border-radius:50%;
+    background:var(--oxblood); color:var(--paper); display:grid; place-items:center;
+    font-family:var(--serif); font-size:1rem; }
+  .ty-steps b{ color:var(--oxblood); }
+  .ty-affirm{ font-family:var(--quote); font-style:italic; font-size:clamp(1.45rem,3vw,1.9rem); color:var(--ink);
+    text-align:center; margin:2.8rem auto 0; max-width:24ch; line-height:1.34; }
+  .ty-back{ text-align:center; margin-top:2.2rem; }
+  .ty-back a{ font-family:var(--mono); font-size:.68rem; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--oxblood); border-bottom:1px solid rgba(166,42,94,.35); padding-bottom:2px; }
+
+  /* footer */
+  footer{ background:#190A1D; color:rgba(255,248,239,.72); padding:clamp(2.8rem,6vw,4.2rem) 0 2.4rem; font-size:1rem; }
+  footer .fwrap{ width:min(1100px, calc(100% - 2.8rem)); margin-inline:auto; }
+  footer .fgrid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:2.2rem; align-items:start; }
+  footer .flock{ font-family:var(--quote); font-weight:600; font-size:1.5rem; letter-spacing:.28em; color:var(--paper); }
+  footer .fsub{ display:flex; align-items:center; gap:.6rem; font-family:var(--mono); font-size:.56rem;
+    letter-spacing:.3em; text-transform:uppercase; color:rgba(255,248,239,.75); margin-top:.35rem; }
+  footer .fsub::before, footer .fsub::after{ content:""; height:1px; width:22px; background:rgba(255,248,239,.4); }
+  footer .ftag{ font-size:.95rem; line-height:1.65; color:rgba(255,248,239,.78); margin:1.2rem 0 0; max-width:34ch; }
+  footer .fsocial{ display:flex; flex-wrap:wrap; gap:1.2rem; margin-top:1.1rem; }
+  footer .fsocial a{ font-family:var(--mono); font-size:.6rem; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--blush); }
+  footer .fsocial a:hover{ color:var(--paper); }
+  footer h4{ font-family:var(--mono); font-weight:700; font-size:.6rem; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--rose-2); margin:0 0 1rem; }
+  footer .fcol a{ display:block; font-size:.95rem; color:rgba(255,248,239,.85); padding:.28rem 0; width:fit-content; }
+  footer .fcol a:hover{ color:var(--paper); }
+  footer .fbottom{ display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:.8rem;
+    border-top:1px solid rgba(255,248,239,.14); margin-top:2.6rem; padding-top:1.6rem; }
+  footer .fcreed{ font-family:var(--quote); font-style:italic; font-size:1.02rem; color:rgba(255,248,239,.78); }
+  footer .fcreed b{ font-style:normal; font-family:var(--serif); font-weight:600; color:var(--paper); letter-spacing:.02em; }
+  footer .fcopy{ font-family:var(--sans); font-size:.78rem; color:rgba(255,248,239,.5); margin:0; }
+  @media (max-width:720px){ footer .fgrid{ grid-template-columns:1fr; gap:1.8rem; } }
+</style>
+</head>
+<body>
+
+  <div class="mh">Welcome to Issue No. 001 <b>· BLOOM with Quadia</b></div>
+
+  <header class="byline">
+    <div class="wrap">
+      <img class="portrait" src="quadia-byline.png" alt="Quadia, founder of BLOOM, holding a rose" fetchpriority="high" />
+      <div class="from">A note from Quadia</div>
+      <h1>Take a breath. <em>It worked.</em></h1>
+      <p class="dek">Your place is held. <strong>Check your inbox for your welcome email</strong> with your private link to The EXHALE. A short companion email will arrive each morning for seven days. Nothing to schedule, nothing to manage. You simply begin.</p>
+      <div class="byline-rule"><span>&#10022;</span></div>
+    </div>
+  </header>
+
+  <main class="next">
+    <div class="wrap">
+      <ul class="ty-steps">
+        <li><span class="n">1</span> Open the welcome email we just sent and tap your private link to The EXHALE.</li>
+        <li><span class="n">2</span> If you do not see it, check spam or promotions, and add <b>quadia@bloomwithquadia.com</b> to your contacts.</li>
+        <li><span class="n">3</span> Read it slowly. This is the one thing today that asks nothing of you.</li>
+      </ul>
+      <p class="ty-affirm">You are allowed to feel alive inside your own life.</p>
+      <p class="ty-back"><a href="index.html">&larr; Return to the letter</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="fwrap">
+      <div class="fgrid">
+        <div>
+          <div class="flock">BLOOM</div>
+          <div class="fsub">With Quadia</div>
+          <p class="ftag">Life after survival for the woman ready to exhale, realign, and bloom on purpose.</p>
+          <div class="fsocial">
+            <a href="https://instagram.com/bloomwithquadia">Instagram</a>
+            <a href="https://tiktok.com/@bloomwithquadia">TikTok</a>
+            <a href="https://threads.net/@bloomwithquadia">Threads</a>
+            <a href="https://pinterest.com/bloomwithquadia">Pinterest</a>
+          </div>
+        </div>
+        <div class="fcol">
+          <h4>Explore</h4>
+          <a href="https://bloomwithquadia.com/">Home</a>
+          <a href="https://bloomwithquadia.com/coaching">Coaching</a>
+          <a href="https://bloomwithquadia.com/blog">Blog</a>
+          <a href="https://bloomwithquadia.com/contact">Contact</a>
+        </div>
+        <div class="fcol">
+          <h4>Legal</h4>
+          <a href="https://bloomwithquadia.com/privacy">Privacy Policy</a>
+          <a href="https://bloomwithquadia.com/terms">Terms</a>
+          <a href="mailto:quadia@bloomwithquadia.com">Email Quadia</a>
+        </div>
+      </div>
+      <div class="fbottom">
+        <div class="fcreed">breathe. rest. trust. <b>BLOOM.</b></div>
+        <p class="fcopy">&copy; 2026 BLOOM with Quadia. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

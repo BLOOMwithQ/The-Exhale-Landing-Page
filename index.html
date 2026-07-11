@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>A letter from Quadia · The EXHALE | BLOOM with Quadia</title>
+<meta name="description" content="A letter from Quadia, for the woman who has been strong for everyone else. The EXHALE is a free, private 7-day guided reflection. Begin tonight." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="quadia-byline.png" fetchpriority="high" />
+
+<style>
+  :root{
+    --ivory:#F8EFE7; --ivory-2:#F8EFE7; --paper:#F8EFE7;
+    --oxblood:#A62A5E; --oxblood-2:#7E1F48;
+    --noir:#2A1228; --noir-2:#160718;
+    --rose:#C84F77; --rose-2:#E37D9B; --blush:#ECB3C8;
+    --ink:#2B0E24; --ink-body:#3A2335; --ink-mute:#5A4452;
+    --line:rgba(43,14,36,0.2); --line-soft:rgba(43,14,36,0.1);
+    --serif:"Playfair Display", Georgia, serif;
+    --quote:"Cormorant Garamond", Georgia, serif;
+    --sans:"Hanken Grotesk", system-ui, sans-serif;
+    --mono:ui-monospace, "SFMono-Regular", Menlo, monospace;
+    --ease:cubic-bezier(0.22,0.61,0.27,1);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+  body{ margin:0; font-family:var(--sans); font-size:1.14rem; line-height:1.75; color:var(--ink-body);
+    background:var(--ivory); -webkit-font-smoothing:antialiased; }
+  img{ max-width:100%; display:block; }
+  a{ color:var(--oxblood); text-decoration:none; }
+  a:hover{ color:var(--oxblood-2); }
+  em{ font-style:italic; color:var(--rose); }
+
+  .kicker{ font-family:var(--sans); font-weight:700; font-size:.7rem; letter-spacing:.26em;
+    text-transform:uppercase; color:var(--oxblood); display:inline-flex; align-items:center; gap:.7rem; }
+  .kicker::before{ content:""; width:26px; height:1.5px; background:currentColor; flex:none; }
+
+  /* ---------- MASTHEAD ---------- */
+  .mh{ background:var(--noir-2); color:rgba(255,248,239,.9); text-align:center; font-family:var(--mono);
+    font-size:.6rem; letter-spacing:.24em; text-transform:uppercase; padding:.6rem 1rem; }
+  .mh b{ color:var(--blush); font-weight:400; }
+
+  /* ---------- BYLINE HERO ---------- */
+  .byline{ background:var(--ivory); padding:clamp(3rem,7vw,5.5rem) 0 0; }
+  .wrap{ width:min(720px, calc(100% - 2.8rem)); margin-inline:auto; }
+  .byline-head{ text-align:center; }
+  .byline-head .portrait{ width:clamp(108px,16vw,140px); height:clamp(108px,16vw,140px); border-radius:50%;
+    object-fit:cover; object-position:50% 42%; margin:0 auto 1.4rem; border:3px solid var(--paper);
+    box-shadow:0 22px 44px -22px rgba(22,7,24,.5); }
+  .byline-head .from{ font-family:var(--quote); font-style:italic; font-size:1.25rem; color:var(--ink-mute); }
+  .byline-head h1{ font-family:var(--serif); font-weight:500; font-size:clamp(2.3rem,6.4vw,3.9rem);
+    line-height:1.1; letter-spacing:.005em; color:var(--ink); margin:.7rem 0 1rem; }
+  .byline-head h1 em{ font-style:italic; color:var(--rose); }
+  .byline-head .dek{ font-size:1.06rem; color:var(--ink-mute); max-width:44ch; margin:0 auto; }
+  .byline-rule{ display:flex; align-items:center; gap:1rem; margin:clamp(2rem,4vw,2.8rem) auto 0; max-width:280px; }
+  .byline-rule::before,.byline-rule::after{ content:""; height:1px; background:var(--line); flex:1; }
+  .byline-rule span{ color:var(--rose); font-size:.8rem; }
+
+  /* ---------- LETTER ---------- */
+  .letter{ padding:clamp(2.4rem,5vw,3.6rem) 0 clamp(3rem,6vw,4.5rem); }
+  .letter p{ margin:0 0 1.55rem; font-size:clamp(1.12rem,1.6vw,1.22rem); line-height:1.85; }
+  .letter p.salutation{ font-family:var(--quote); font-style:italic; font-size:1.5rem; color:var(--ink); }
+  .letter .drop::first-letter{ font-family:var(--serif); font-weight:500; font-size:3.4em; line-height:.78;
+    float:left; padding:.08em .12em 0 0; color:var(--oxblood); }
+  .letter .keyline{ font-family:var(--serif); font-weight:500; font-size:clamp(1.5rem,3vw,2rem); line-height:1.35;
+    color:var(--ink); margin:2.4rem 0; }
+  .letter .keyline em{ color:var(--rose); }
+  .letter .sig{ margin-top:2.6rem; }
+  .letter .sig .gv{ font-family:"Great Vibes", cursive; font-size:2.8rem; color:var(--oxblood); line-height:1; }
+  .letter .sig .st{ font-family:var(--mono); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--ink-mute); margin-top:.5rem; }
+  .ps{ display:flex; align-items:center; gap:1.6rem; margin-top:2.8rem; padding-top:2.2rem;
+    border-top:1px solid var(--line-soft); }
+  .ps .ps-media{ flex:none; width:clamp(120px,18vw,160px); }
+  .ps .ps-media img{ width:100%; border:1px solid var(--line-soft); border-radius:3px;
+    box-shadow:0 18px 36px -20px rgba(22,7,24,.45); }
+  .ps .ps-media figcaption{ font-family:var(--mono); font-size:.54rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink-mute); margin-top:.6rem; text-align:center; }
+  .ps .ps-body{ font-family:var(--quote); font-style:italic; font-size:1.22rem; line-height:1.6;
+    color:var(--ink); margin:0; }
+  .ps .ps-body b{ font-style:normal; font-weight:600; color:var(--oxblood); }
+  @media (max-width:540px){ .ps{ flex-direction:row; align-items:flex-start; } .ps .ps-media{ width:104px; } }
+
+  /* ---------- PULL QUOTE ---------- */
+  .pullq{ background:var(--noir); color:var(--paper); padding:clamp(3.6rem,8vw,5.5rem) 0; text-align:center; }
+  .pullq .wrap{ width:min(780px, calc(100% - 2.8rem)); }
+  .pullq p{ font-family:var(--quote); font-style:italic; font-size:clamp(1.6rem,3.6vw,2.4rem); line-height:1.4;
+    margin:0; color:var(--paper); }
+  .pullq p em{ color:var(--rose-2); }
+  .pullq cite{ display:block; font-family:var(--mono); font-style:normal; font-size:.64rem; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--rose-2); margin-top:1.6rem; }
+
+  /* ---------- URGENCY ---------- */
+  .cost{ background:var(--ivory); border-top:1px solid var(--line-soft);
+    padding:clamp(3.2rem,7vw,4.8rem) 0; }
+  .cost .wrap{ width:min(680px, calc(100% - 2.8rem)); text-align:center; }
+  .cost h2{ font-family:var(--serif); font-weight:500; font-size:clamp(1.8rem,4.6vw,2.7rem); line-height:1.16;
+    color:var(--ink); margin:1rem 0 1.1rem; }
+  .cost h2 em{ font-style:italic; color:var(--rose); }
+  .cost p{ color:var(--ink-body); font-size:1.05rem; max-width:52ch; margin:0 auto; }
+
+  /* ---------- THE ASK ---------- */
+  .ask{ padding:clamp(3.6rem,8vw,5.5rem) 0; background:var(--ivory); }
+  .ask .wrap{ width:min(680px, calc(100% - 2.8rem)); text-align:center; }
+  .ask h2{ font-family:var(--serif); font-weight:500; font-size:clamp(1.9rem,5vw,2.9rem); line-height:1.12;
+    color:var(--ink); margin:1rem 0 1rem; }
+  .ask h2 em{ font-style:italic; color:var(--rose); }
+  .ask .lead{ color:var(--ink-mute); font-size:1.05rem; max-width:46ch; margin:0 auto 2rem; }
+  .signup{ display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap; }
+  .signup input[type="email"]{ flex:0 1 320px; min-width:0; border:1.5px solid var(--line); background:#FFFDFa;
+    border-radius:2px; padding:1rem 1.2rem; font-family:var(--sans); font-size:1rem; color:var(--ink); outline:none;
+    transition:border-color .25s, box-shadow .25s; }
+  .signup input[type="email"]:focus{ border-color:var(--oxblood); box-shadow:0 0 0 3px rgba(166,42,94,.14); }
+  .signup input::placeholder{ color:var(--ink-mute); opacity:.8; }
+  .btn{ border:none; cursor:pointer; display:inline-flex; align-items:center; gap:.7rem; padding:1rem 2rem;
+    border-radius:2px; font-family:var(--sans); font-size:.76rem; font-weight:700; letter-spacing:.2em;
+    text-transform:uppercase; background:var(--oxblood); color:var(--paper);
+    transition:background .35s var(--ease), transform .35s var(--ease); }
+  .btn:hover{ background:var(--oxblood-2); transform:translateY(-2px); }
+  .btn .arr{ transition:transform .3s var(--ease); }
+  .btn:hover .arr{ transform:translateX(4px); }
+  .form-note{ font-size:.9rem; color:var(--ink-mute); margin:1.1rem 0 0; }
+  .form-note b{ color:var(--oxblood); }
+  .quiz-hatch{ font-family:var(--quote); font-style:italic; font-size:1.08rem; color:var(--ink-mute); margin:1.5rem 0 0; }
+  .quiz-hatch a{ color:var(--oxblood); border-bottom:1px solid rgba(166,42,94,.35); padding-bottom:1px;
+    transition:color .25s, border-color .25s; }
+  .quiz-hatch a:hover{ color:var(--oxblood-2); border-color:var(--oxblood-2); }
+  .trust{ display:flex; justify-content:center; flex-wrap:wrap; gap:.5rem 1.6rem; margin-top:1.6rem;
+    padding-top:1.4rem; border-top:1px solid var(--line-soft); }
+  .trust span{ display:inline-flex; align-items:center; gap:.5rem; font-size:.82rem; font-weight:600; color:var(--ink-body); }
+  .trust svg{ width:15px; height:15px; color:var(--oxblood); flex:none; }
+
+  /* ---------- FAQ ---------- */
+  .faq{ background:var(--paper); padding:clamp(3.2rem,7vw,5rem) 0; }
+  .faq .wrap{ width:min(680px, calc(100% - 2.8rem)); }
+  .faq h2{ font-family:var(--serif); font-weight:500; font-size:clamp(1.7rem,4vw,2.4rem); color:var(--ink);
+    margin:.8rem 0 1.6rem; }
+  .faq h2 em{ font-style:italic; color:var(--rose); }
+  details{ border-bottom:1px solid var(--line); }
+  summary{ list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1.4rem;
+    padding:1.25rem 0; font-family:var(--sans); font-weight:600; font-size:1.08rem; color:var(--ink); line-height:1.35; }
+  summary::-webkit-details-marker{ display:none; }
+  summary .ico{ flex:none; width:22px; height:22px; position:relative; }
+  summary .ico::before, summary .ico::after{ content:""; position:absolute; background:var(--oxblood); transition:transform .3s var(--ease), opacity .3s var(--ease); }
+  summary .ico::before{ top:10px; left:2px; width:18px; height:1.6px; }
+  summary .ico::after{ left:10px; top:2px; width:1.6px; height:18px; }
+  details[open] .ico::after{ transform:rotate(90deg); opacity:0; }
+  details p{ margin:0; padding:0 0 1.4rem; font-size:1rem; line-height:1.7; color:var(--ink-body); max-width:60ch; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ background:#190A1D; color:rgba(255,248,239,.72); padding:clamp(2.8rem,6vw,4.2rem) 0 2.4rem; }
+  footer .fwrap{ width:min(1100px, calc(100% - 2.8rem)); margin-inline:auto; }
+  footer .fgrid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:2.2rem; align-items:start; }
+  footer .flock{ font-family:var(--quote); font-weight:600; font-size:1.5rem; letter-spacing:.28em; color:var(--paper); }
+  footer .fsub{ display:flex; align-items:center; gap:.6rem; font-family:var(--mono); font-size:.56rem;
+    letter-spacing:.3em; text-transform:uppercase; color:rgba(255,248,239,.75); margin-top:.35rem; }
+  footer .fsub::before, footer .fsub::after{ content:""; height:1px; width:22px; background:rgba(255,248,239,.4); }
+  footer .ftag{ font-size:.95rem; line-height:1.65; color:rgba(255,248,239,.78); margin:1.2rem 0 0; max-width:34ch; }
+  footer .fsocial{ display:flex; flex-wrap:wrap; gap:1.2rem; margin-top:1.1rem; }
+  footer .fsocial a{ font-family:var(--mono); font-size:.6rem; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--blush); }
+  footer .fsocial a:hover{ color:var(--paper); }
+  footer h4{ font-family:var(--mono); font-weight:700; font-size:.6rem; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--rose-2); margin:0 0 1rem; }
+  footer .fcol a{ display:block; font-size:.95rem; color:rgba(255,248,239,.85); padding:.28rem 0; width:fit-content; }
+  footer .fcol a:hover{ color:var(--paper); }
+  footer .fbottom{ display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:.8rem;
+    border-top:1px solid rgba(255,248,239,.14); margin-top:2.6rem; padding-top:1.6rem; }
+  footer .fcreed{ font-family:var(--quote); font-style:italic; font-size:1.02rem; color:rgba(255,248,239,.78); }
+  footer .fcreed b{ font-style:normal; font-family:var(--serif); font-weight:600; color:var(--paper); letter-spacing:.02em; }
+  footer .fcopy{ font-family:var(--sans); font-size:.78rem; color:rgba(255,248,239,.5); margin:0; }
+  @media (max-width:720px){ footer .fgrid{ grid-template-columns:1fr; gap:1.8rem; } }
+
+  /* ---------- MOBILE STICKY CTA ---------- */
+  .m-cta{ position:fixed; inset:auto 0 0 0; z-index:80; background:rgba(22,7,24,.97);
+    -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); }
+  .m-cta a{ display:block; text-align:center; color:var(--paper); font-size:.72rem; font-weight:700;
+    letter-spacing:.2em; text-transform:uppercase; padding:1.1rem; }
+
+  @media (min-width:700px){ .m-cta{ display:none; } }
+
+  /* ---------- SCROLL REVEAL ---------- */
+  .reveal{ opacity:0; transform:translateY(20px);
+    transition:opacity .85s cubic-bezier(0.16,1,0.3,1), transform .95s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.in{ opacity:1; transform:none; }
+
+  @media (max-width:600px){
+    body{ font-size:1.06rem; }
+    .signup{ flex-direction:column; }
+    .signup input[type="email"], .signup .btn{ width:100%; justify-content:center; }
+  }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } .btn:hover{ transform:none; }
+    .reveal{ opacity:1 !important; transform:none !important; transition:none !important; } }
+</style>
+</head>
+<body>
+
+  <div class="mh">A letter, before anything else <b>· BLOOM with Quadia</b></div>
+
+  <!-- ============ BYLINE ============ -->
+  <header class="byline">
+    <div class="wrap byline-head">
+      <img class="portrait" src="quadia-byline.png" alt="Quadia, founder of BLOOM, holding a rose" fetchpriority="high" />
+      <div class="from">A letter from Quadia</div>
+      <h1>Before you give one more year to being <em>the strong one.</em></h1>
+      <p class="dek">Three minutes to read. Written for the woman everyone leans on, by a woman who used to be her.</p>
+      <div class="byline-rule"><span>&#10022;</span></div>
+    </div>
+  </header>
+
+  <!-- ============ THE LETTER ============ -->
+  <main class="letter">
+    <div class="wrap">
+      <p class="salutation">Sis,</p>
+
+      <p class="drop">I know what your mornings look like, because they were mine. Awake before everyone, already listing. The lunches, the deadlines, the mother who needs calling, the friend who needs holding, the body that gets whatever minutes are left, which is to say, none. You do it beautifully. Everyone says so. Dependable. Unbreakable. The rock.</p>
+
+      <p>Nobody asks the rock how she is doing. And somewhere along the way you stopped asking yourself.</p>
+
+      <p>I spent years wearing exhaustion like a wedding ring, proof of how much I loved my family, my work, my people. I slept and woke up tired anyway. I sat down and my mind kept running. I told myself I would rest when things calmed down, and things never once calmed down on their own.</p>
+
+      <p class="keyline">Then I did the thing I was raised to believe was selfish. I rested first. And nothing fell apart, <em>except the lie.</em></p>
+
+      <p>I did not fall behind. I became sharper, softer, more successful, more present, more myself. Depletion had been quietly taxing everything I built, and I had been calling the tax virtue. Unlearning that took me years. I wrote The EXHALE so it would not take you as long.</p>
+
+      <p>It is seven short reflections, one each morning for a week, about ten minutes with your coffee. Each day ends with a few reflection questions and a private place to write what they stir, kept on your device and nowhere else. It is free, it is private, and it does not add a single task to your list. It only asks one thing of you: to stop treating your tiredness as a personal failure, and to start treating it as information.</p>
+
+      <p>You have been strong for everyone. This is for the woman underneath.</p>
+
+      <div class="sig">
+        <div class="gv">Quadia</div>
+        <div class="st">Founder of BLOOM &middot; Reinvention coach for women 40+</div>
+      </div>
+
+      <div class="ps">
+        <figure class="ps-media" style="margin:0">
+          <img src="exhale-declaration.png" alt="The Rose Era Declaration, a signed keepsake" loading="lazy" decoding="async" />
+          <figcaption>Day seven &middot; The keepsake</figcaption>
+        </figure>
+        <p class="ps-body"><b>P.S.</b> &mdash; On the seventh day, you&rsquo;ll sign something: The Rose Era Declaration, your own constitution for the era ahead. Print it, frame it, return to it whenever the world asks you to be the rock again. Women tell me it&rsquo;s the part they keep.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ PULL QUOTE ============ -->
+  <section class="pullq">
+    <div class="wrap">
+      <p>&ldquo;It was honest and gentle, like a sister-friend guiding me and telling me the truth <em>because she wants the best for me.</em>&rdquo;</p>
+      <cite>Michelle, 56 &middot; on The EXHALE</cite>
+    </div>
+  </section>
+
+  <!-- ============ THE QUIET COST (urgency) ============ -->
+  <section class="cost">
+    <div class="wrap">
+      <span class="kicker">The quiet cost of one more week</span>
+      <h2>Or this is simply another year funded by <em>depletion.</em></h2>
+      <p>That dreading, tired feeling will not change on its own. Another year of &ldquo;I will rest when things calm down&rdquo; is another 365 mornings that begin already exhausted, and 52 weekends spent recovering instead of living. The letter took you three minutes. The EXHALE takes ten a day, and you could begin tonight.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE ASK ============ -->
+  <section class="ask" id="begin">
+    <div class="wrap">
+      <span class="kicker">The EXHALE &middot; Free 7-day reflection</span>
+      <h2>Begin <em>tonight.</em></h2>
+      <p class="lead">Add your email and your private link arrives in minutes. Day One is waiting whenever you are, at 2pm or 2am.</p>
+
+      <form class="signup ml-subscribe-form ml-subscribe-form-43328577" action="https://assets.mailerlite.com/jsonp/2458368/forms/191920584730347233/subscribe" method="post" target="ml_iframe" data-redirect="thank-you.html" novalidate>
+        <input type="email" name="fields[email]" placeholder="Your email address" required aria-label="Your email address" autocomplete="email" />
+        <button type="submit" class="btn">Begin the EXHALE, free <span class="arr" aria-hidden="true">&rarr;</span></button>
+        <input type="hidden" name="ml-submit" value="1" />
+        <input type="hidden" name="anticsrf" value="true" />
+      </form>
+      <p class="form-note"><b>No card. No spam.</b> Unsubscribing takes one tap.</p>
+
+      <p class="quiz-hatch">Not sure yet? Take the 3-minute quiz: <a href="https://yourexhale.bloomwithquadia.com/quiz.html">What kind of strong are you? &rarr;</a></p>
+
+      <div class="trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Completely free</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Private &amp; yours to keep</span>
+        <span>Guided by <strong style="color:var(--oxblood)">Quadia</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ · 4 questions ============ -->
+  <section class="faq">
+    <div class="wrap">
+      <span class="kicker">Before you begin</span>
+      <h2>Questions, gently <em>answered.</em></h2>
+
+      <details>
+        <summary>Is it really free?<span class="ico" aria-hidden="true"></span></summary>
+        <p>Completely. No card, no trial, no catch. The EXHALE is a gift, and your private link arrives by email the moment you sign up.</p>
+      </details>
+      <details>
+        <summary>How much time does it take?<span class="ico" aria-hidden="true"></span></summary>
+        <p>About ten minutes a day for seven days, read with your coffee or before bed. Nothing to schedule, nothing to keep up with.</p>
+      </details>
+      <details>
+        <summary>What happens right after I sign up?<span class="ico" aria-hidden="true"></span></summary>
+        <p>A welcome email lands instantly with your private link to The EXHALE, a beautiful page that saves to your phone. Then one short companion email each morning for seven days.</p>
+      </details>
+      <details>
+        <summary>Will you flood my inbox?<span class="ico" aria-hidden="true"></span></summary>
+        <p>No. The seven daily reflections, then gentle weekly letters. Every email is short and warm, and unsubscribing takes one tap.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fwrap">
+      <div class="fgrid">
+        <div>
+          <div class="flock">BLOOM</div>
+          <div class="fsub">With Quadia</div>
+          <p class="ftag">Life after survival for the woman ready to exhale, realign, and bloom on purpose.</p>
+          <div class="fsocial">
+            <a href="https://instagram.com/bloomwithquadia">Instagram</a>
+            <a href="https://tiktok.com/@bloomwithquadia">TikTok</a>
+            <a href="https://threads.net/@bloomwithquadia">Threads</a>
+            <a href="https://pinterest.com/bloomwithquadia">Pinterest</a>
+          </div>
+        </div>
+        <div class="fcol">
+          <h4>Explore</h4>
+          <a href="https://bloomwithquadia.com/">Home</a>
+          <a href="https://bloomwithquadia.com/coaching">Coaching</a>
+          <a href="https://bloomwithquadia.com/blog">Blog</a>
+          <a href="https://bloomwithquadia.com/contact">Contact</a>
+        </div>
+        <div class="fcol">
+          <h4>Legal</h4>
+          <a href="https://bloomwithquadia.com/privacy">Privacy Policy</a>
+          <a href="https://bloomwithquadia.com/terms">Terms</a>
+          <a href="mailto:quadia@bloomwithquadia.com">Email Quadia</a>
+        </div>
+      </div>
+      <div class="fbottom">
+        <div class="fcreed">breathe. rest. trust. <b>BLOOM.</b></div>
+        <p class="fcopy">&copy; 2026 BLOOM with Quadia. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="m-cta"><a href="#begin">Begin the EXHALE, free</a></div>
+
+  <iframe name="ml_iframe" title="signup" aria-hidden="true" tabindex="-1" style="position:absolute;width:0;height:0;border:0;left:-9999px"></iframe>
+  <script>
+    document.querySelectorAll('form[data-redirect]').forEach(function(form){
+      form.addEventListener('submit', function(){
+        setTimeout(function(){ window.location.href = form.getAttribute('data-redirect'); }, 800);
+      });
+    });
+
+    /* ---- subtle scroll reveal (fade-up, gentle stagger) ---- */
+    (function(){
+      var els = document.querySelectorAll(
+        '.byline-head > *, .letter p, .letter .sig, .letter .ps, .pullq .wrap > *, ' +
+        '.cost .wrap > *, .ask .wrap > *, .faq .wrap > *'
+      );
+      els.forEach(function(el){ el.classList.add('reveal'); });
+      if(!('IntersectionObserver' in window)){
+        els.forEach(function(el){ el.classList.add('in'); });
+        return;
+      }
+      var pending = [];
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            var el = e.target;
+            io.unobserve(el);
+            pending.push(el);
+            var i = pending.length - 1;
+            setTimeout(function(){ el.classList.add('in'); pending = pending.filter(function(x){ return x!==el; }); }, Math.min(i*90, 360));
+          }
+        });
+      }, { rootMargin:'0px 0px -8% 0px', threshold:0.08 });
+      els.forEach(function(el){ io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
