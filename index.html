@@ -253,6 +253,149 @@
     </div>
   </section>
 
+
+  <!-- ===== MY STORY TIMELINE (standalone embed) =====
+Requires fonts (skip if your page already loads them):
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+-->
+<style>
+  #story{position:relative;overflow:hidden;background:linear-gradient(170deg,#2a1228,#160718 70%);color:#f3e7df;padding:clamp(5.5rem,11vw,9rem) 0;font-family:'Hanken Grotesk',sans-serif;}
+  #story .st-wrap{position:relative;z-index:1;width:100%;max-width:760px;margin:0 auto;padding:0 clamp(1.4rem,5vw,3rem);}
+  #story .st-glow{position:absolute;top:-10%;left:-8%;width:50%;height:60%;border-radius:50%;background:radial-gradient(circle,rgba(200,79,119,.16),transparent 68%);filter:blur(70px);pointer-events:none;}
+  #story .st-eyebrow{text-align:center;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:#e9a7bd;font-weight:600;margin:0 0 1.1rem;}
+  #story h2{text-align:center;font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:#fff8ef;margin:0 0 1rem;}
+  #story h2 em{font-style:italic;color:#e9a7bd;}
+  #story .st-sub{text-align:center;color:#cbb6bf;font-size:1.02rem;max-width:32rem;margin:0 auto clamp(3rem,6vw,4.2rem);}
+  #story .st-chapter{display:grid;grid-template-columns:30px 1fr;gap:clamp(1.2rem,3.5vw,2.4rem);}
+  #story .st-rail{display:flex;flex-direction:column;align-items:center;}
+  #story .st-dot{width:13px;height:13px;border-radius:50%;background:radial-gradient(circle,#e9a7bd,#c84f77);margin-top:.4rem;animation:stRing 3.2s ease-in-out 1s infinite;}
+  #story .st-line{flex:1;width:2px;border-radius:2px;background:linear-gradient(180deg,rgba(200,79,119,.55),rgba(233,167,189,.12));margin:.7rem 0;}
+  #story .st-body{padding-bottom:clamp(1.8rem,3.5vw,2.6rem);cursor:pointer;}
+  #story .st-era{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#e9a7bd;font-weight:700;margin:0 0 .55rem;}
+  #story h3{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.15;color:#fff8ef;margin:0 0 .8rem;}
+  #story .st-pull{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.1rem,1.9vw,1.3rem);line-height:1.55;color:#e9a7bd;margin:0;padding-left:1.1rem;border-left:2px solid rgba(200,79,119,.5);}
+  #story .st-more{max-height:0;opacity:0;overflow:hidden;transition:max-height .7s cubic-bezier(.4,0,.2,1),opacity .55s ease;}
+  #story .st-chapter.is-open .st-more{max-height:60rem;opacity:1;}
+  #story .st-more-inner{display:flex;flex-direction:column;gap:.9rem;padding:1.2rem 0 .2rem 1.1rem;border-left:2px solid rgba(233,167,189,.18);}
+  #story .st-more-inner p{color:#d9c7cf;font-size:1rem;line-height:1.8;margin:0;}
+  #story .st-hint{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#a98ea0;font-weight:600;margin:.7rem 0 0;transition:opacity .4s ease;opacity:.75;}
+  #story .st-chapter.is-open .st-hint{opacity:0;}
+  #story .st-mantra{text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.6rem,3vw,2.3rem);color:#fff8ef;margin:0 0 .6rem;}
+  #story .st-mantra span:last-child{color:#e9a7bd;}
+  #story .st-outro{text-align:center;color:#cbb6bf;font-size:1rem;margin:0 0 1.8rem;}
+  #story .st-cta{display:inline-flex;align-items:center;gap:.6rem;padding:1.05rem 2.2rem;background:transparent;color:#e9a7bd;border:1px solid rgba(233,167,189,.45);border-radius:3px;font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .25s ease,border-color .25s ease;}
+  #story .st-cta:hover{background:rgba(200,79,119,.12);border-color:#e9a7bd;}
+  #story .st-reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease;}
+  #story .st-reveal.in{opacity:1;transform:none;}
+  @keyframes stRing{0%,100%{box-shadow:0 0 0 0 rgba(200,79,119,.35);}50%{box-shadow:0 0 0 9px rgba(200,79,119,0);}}
+  @media (prefers-reduced-motion: reduce){#story *{animation:none!important;transition:none!important;}#story .st-reveal{opacity:1;transform:none;}}
+</style>
+
+<section id="story">
+  <div class="st-glow"></div>
+  <div class="st-wrap">
+    <p class="st-eyebrow st-reveal">My story</p>
+    <h2 class="st-reveal">Before BLOOM, there was <em>the strong one</em></h2>
+    <p class="st-sub st-reveal">If you have ever been her, this will feel familiar.</p>
+
+    <div class="st-chapter st-reveal">
+      <div class="st-rail"><span class="st-dot"></span><span class="st-line"></span></div>
+      <div class="st-body">
+        <p class="st-era">The beginning &middot; eldest of three</p>
+        <h3>The girl who learned to be strong</h3>
+        <p class="st-pull">Strength wasn&rsquo;t something I chose. It chose me. And then it simply became my identity.</p>
+        <div class="st-more"><div class="st-more-inner">
+          <p>I was born the eldest of three children, and although I didn&rsquo;t know it then, from an early age I began to learn the role that would shape much of my life. Responsibility arrived early. Taking care of my brother while my mom worked at night. Chaperoning my sister&rsquo;s field trips. I became the one who noticed what needed to be done, who stepped in before someone had to ask, and who quietly learned that being dependable was something to be proud of.</p>
+          <p>Over time, I stopped distinguishing between who I was and who I needed to be. The strong one. The one who could handle it. The one people called on. That lesson followed me into adulthood.</p>
+        </div></div>
+        <p class="st-hint">Hover to read this chapter</p>
+      </div>
+    </div>
+
+    <div class="st-chapter st-reveal">
+      <div class="st-rail"><span class="st-dot"></span><span class="st-line"></span></div>
+      <div class="st-body">
+        <p class="st-era">My twenties &middot; proving I was worthy</p>
+        <h3>The start of erosion</h3>
+        <p class="st-pull">The sacrifices were small at first. That&rsquo;s how you end up on your own back burner.</p>
+        <div class="st-more"><div class="st-more-inner">
+          <p>Like many Black women, I was determined to break generational patterns, to prove I was worthy. I worked. Then I worked through school. I joined Public Allies, led programs that helped women, and put in 80-hour weeks because I thought that&rsquo;s what a strong woman does. I was making more money than older family members, so when they asked, I gave. Sacrifice yourself for the sake of others &mdash; that&rsquo;s what strong women do.</p>
+          <p>From the outside, my life looked successful, and in many ways it was. I travelled. I dressed up. I was doing me. But somewhere along the way, my own needs started quietly slipping to the bottom of the list. Not getting dressed for holidays because I was &ldquo;cooking all day.&rdquo; Staying later than my co-workers. Letting others convince me otherwise when I said no. A skipped meal. Working through exhaustion. Believing rest could wait until everything else was finished.</p>
+          <p>The problem is that everything is never finished.</p>
+        </div></div>
+        <p class="st-hint">Hover to read this chapter</p>
+      </div>
+    </div>
+
+    <div class="st-chapter st-reveal">
+      <div class="st-rail"><span class="st-dot"></span><span class="st-line"></span></div>
+      <div class="st-body">
+        <p class="st-era">The building years &middot; wife, mother, leader</p>
+        <h3>Living without room</h3>
+        <p class="st-pull">&ldquo;What do I need?&rdquo; and &ldquo;What still needs to be done?&rdquo; are two very different questions.</p>
+        <div class="st-more"><div class="st-more-inner">
+          <p>Responsibilities multiplied, and so did my capacity to meet them. What didn&rsquo;t grow was the space I had left for myself. I married. I became a mother. I pursued higher education &mdash; as a Black woman, you gotta get that degree. I built a meaningful career and became exceptionally skilled at caring for everyone and everything entrusted to me. Family. Work. Leadership. Community.</p>
+          <p>I stopped asking &ldquo;What do I need?&rdquo; and started asking &ldquo;What still needs to be done?&rdquo; Eventually I looked around at the life I had built and admitted something difficult: I was tired. I was dependable, I could be counted on and called on, and I had created a life that looked good &mdash; but I was tired. Doomscrolling became my getaway, especially at night. Rest was needed, but not welcomed.</p>
+        </div></div>
+        <p class="st-hint">Hover to read this chapter</p>
+      </div>
+    </div>
+
+    <div class="st-chapter st-reveal">
+      <div class="st-rail"><span class="st-dot"></span><span class="st-line"></span></div>
+      <div class="st-body">
+        <p class="st-era">At forty-six</p>
+        <h3>The year everything changed</h3>
+        <p class="st-pull">Rest is not the reward you receive after doing enough. It is one of the conditions that allows you to live well in the first place.</p>
+        <div class="st-more"><div class="st-more-inner">
+          <p>At forty-six, I made a decision that would eventually become the foundation of BLOOM. I gave myself permission to stop operating on autopilot. Not because I wanted less from life. Because I wanted more from it.</p>
+          <p>I spent two years getting back to myself. I became curious about why I felt chronically depleted despite doing everything a successful woman is supposed to do. I studied the nervous system, behavior, rest, stress, attention, identity, and the ways Black women are taught to be &ldquo;the strong one.&rdquo; I experimented with new rhythms: quieter mornings, healthier food, movement, hydration, prayer, reflection, and breath practices. Little by little, I discovered something I had never been taught.</p>
+        </div></div>
+        <p class="st-hint">Hover to read this chapter</p>
+      </div>
+    </div>
+
+    <div class="st-chapter st-reveal">
+      <div class="st-rail"><span class="st-dot"></span></div>
+      <div class="st-body">
+        <p class="st-era">2025 &middot; now</p>
+        <h3>Why BLOOM exists</h3>
+        <p class="st-pull">BLOOM is my answer to that question.</p>
+        <div class="st-more"><div class="st-more-inner">
+          <p>In 2025, I returned from a two-week vacation and asked myself: how can vacation Quadia become everyday Quadia? Vacation felt like an escape, and that day I decided I wanted a life I didn&rsquo;t need to escape from. BLOOM was created to help women build lives they no longer need to escape from.</p>
+          <p>The practices inside BLOOM are simple, but they are not small. Every exhale creates a little more room. Every moment of rest gives you space. Every act of trust loosens the grip of survival and makes space for choice. I don&rsquo;t believe women need fixing. I believe many of us have spent so many years carrying what life required that we have forgotten to ask whether the life we&rsquo;re carrying still has room for us.</p>
+        </div></div>
+        <p class="st-hint">Hover to read this chapter</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;" class="st-reveal">
+      <p class="st-mantra"><span>Breathe.</span> <span>Rest.</span> <span>Trust.</span></p>
+      <p class="st-outro">That mantra became BLOOM. And perhaps, if you&rsquo;re here, it&rsquo;s becoming yours as well.</p>
+      <a class="st-cta" href="#guide">Begin your own exhale <span style="font-size:1rem;">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var chapters = document.querySelectorAll('#story .st-chapter');
+  chapters.forEach(function(ch){
+    var body = ch.querySelector('.st-body');
+    body.addEventListener('mouseenter', function(){ ch.classList.add('is-open'); });
+    body.addEventListener('mouseleave', function(){ if(!ch.dataset.pinned) ch.classList.remove('is-open'); });
+    body.addEventListener('click', function(){
+      if(ch.dataset.pinned){ delete ch.dataset.pinned; ch.classList.remove('is-open'); }
+      else { ch.dataset.pinned = '1'; ch.classList.add('is-open'); }
+    });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('#story .st-reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+
   <!-- ============ THE QUIET COST (urgency) ============ -->
   <section class="cost">
     <div class="wrap">
