@@ -1,0 +1,8 @@
+# This page is retired. Everything here now redirects to the About page on the main site.
+# Keep this site (and its custom domain) for 30-60 days so old links still land somewhere,
+# then delete the site. See BLOOM-October-2026-OS/reports/url-architecture-2026-10-08.md.
+[[redirects]]
+  from = "/*"
+  to = "https://bloomwithquadia.com/about"
+  status = 301
+  force = true
